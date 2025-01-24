@@ -1,9 +1,10 @@
 import mysql.connector
+import os
 
 dataBase = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="Zarak1kenp@chi",
+    password=os.getenv('DB_PASSWORD'),
     auth_plugin='mysql_native_password'
 )
 
